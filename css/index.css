@@ -71,27 +71,28 @@ body {
     color: var(--color-white);
 }
 
+/* Estilos para las columnas */
 #rp-q {
     display: flex;
-    flex-flow: row wrap; /* Cambiado para que las columnas se envuelvan en filas en pantallas pequeñas */
+    flex-wrap: wrap; /* Permitir que las columnas se envuelvan en filas en pantallas pequeñas */
     justify-content: space-around;
-    align-items: flex-start;
+    align-items: stretch; /* Hacer que las columnas se estiren verticalmente para igualar la altura */
     padding: 20px 10px;
 }
 
 #rp-q > div {
+    flex: 0 0 calc(33% - 20px); /* Calcular el ancho de cada columna con margen */
     background: var(--color-black);
     padding: 10px;
     border-radius: 5px;
-    width: 100%; /* Cambiado para que cada columna ocupe el 100% del ancho en pantallas pequeñas */
-    margin: 0 0 10px 0; /* Añadido margen inferior para separar las columnas en pantallas pequeñas */
-    box-sizing: border-box; /* Añadido para que el padding y el borde no afecten el ancho total */
+    margin: 0 10px 10px 0; /* Agregar margen y ajustar el margen derecho e inferior */
+    box-sizing: border-box; /* Ajustar el modelo de caja para incluir padding y border en el ancho total */
 }
 
 /* Media query para pantallas pequeñas (celulares) */
 @media (max-width: 767px) {
     #rp-q > div {
-        width: 100%; /* En pantallas pequeñas, cada columna ocupa el 100% del ancho */
+        flex: 0 0 calc(100% - 20px); /* En pantallas pequeñas, cada columna ocupa el 100% del ancho */
     }
 }
 
