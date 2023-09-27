@@ -1,3 +1,4 @@
+/* Importación de fuente desde Google Fonts */
 @import url("https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300italic,regular,italic,700,700italic");
 
 /* Variables para colores */
@@ -183,6 +184,7 @@ body {
     height: 80vh;
     padding: 50px;
 }
+
 .contenedor-canciones {
     margin: 7px;
     background: #4f5562;
@@ -200,18 +202,32 @@ body {
     color: #fff !important;
     font-size: 1.5em !important;
 }
+
 /* Estilos para iframe */
 iframe {
     margin: 0 auto;
 }
+
 @media (max-width: 767px) {
     /* Estilos para pantallas más pequeñas (celulares) */
-  }
-  
-  @media (min-width: 768px) and (max-width: 991px) {
-    /* Estilos para pantallas medianas (tablets) */
-  }
-  
-  @media (min-width: 992px) {
-    /* Estilos para pantallas grandes (ordenadores) */
-  }
+    body {
+        font-size: 1.2rem; /* Ajusta el tamaño de la fuente para pantallas más pequeñas */
+    }
+
+    .contenedorBusqueda input,
+    .contenedorBusqueda button {
+        width: 100%; /* Ajusta el ancho para ocupar toda la pantalla en dispositivos móviles */
+    }
+
+    #rp-q > div {
+        width: 100%; /* Ajusta el ancho para ocupar toda la pantalla en dispositivos móviles */
+        margin: 0 0 20px 0; /* Añade espacio entre los elementos */
+    }
+
+    .popupContenedor .popup {
+        width: 90%; /* Ajusta el ancho del popup para pantallas más pequeñas */
+        height: 90%; /* Ajusta la altura del popup para pantallas más pequeñas */
+        padding: 20px; /* Ajusta el padding */
+    }
+}
+

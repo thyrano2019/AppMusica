@@ -1,30 +1,28 @@
-*:focus
-{
+/* Estilos generales */
+*:focus {
     outline: none;
 }
 
-body
-{
+body {
     font-family: Helvetica, Arial;
     margin: 0;
 }
 
-#app-cover
-{
+#app-cover {
     position: relative;
-    width: 430px;
+    width: 100%; /* Cambiado a porcentaje para hacerlo adaptable */
+    max-width: 430px; /* Ancho máximo para evitar que se vea muy grande en pantallas grandes */
     height: 100px;
+    margin: 0 auto; /* Centrado en la página */
 }
 
-#player
-{
+#player {
     position: relative;
     height: 100%;
     z-index: 3;
 }
 
-#player-track
-{
+#player-track {
     position: absolute;
     top: 0;
     right: 15px;
@@ -36,44 +34,37 @@ body
     z-index: 1;
 }
 
-#player-track.active
-{
+#player-track.active {
     top: -92px;
 }
 
-#album-name
-{
+#album-name {
     color: #54576f;
     font-size: 17px;
     font-weight: bold;
 }
 
-#track-name
-{
+#track-name {
     color: #acaebd;
     font-size: 13px;
     margin: 2px 0 13px 0;
 }
 
-#track-time
-{
+#track-time {
     height: 12px;
     margin-bottom: 3px;
     overflow: hidden;
 }
 
-#current-time
-{
+#current-time {
     float: left;
 }
 
-#track-length
-{
+#track-length {
     float: right;
 }
 
-#current-time, #track-length
-{
+#current-time, #track-length {
     color: transparent;
     font-size: 11px;
     background-color: #ffe8ee;
@@ -81,27 +72,23 @@ body
     transition: 0.3s ease all;
 }
 
-#track-time.active #current-time, #track-time.active #track-length
-{
+#track-time.active #current-time, #track-time.active #track-length {
     color: #f86d92;
     background-color: transparent;
 }
 
-#s-area, #seek-bar
-{
+#s-area, #seek-bar {
     position: relative;
     height: 4px;
     border-radius: 4px;
 }
 
-#s-area
-{
-    background-color:#ffe8ee;
+#s-area {
+    background-color: #ffe8ee;
     cursor: pointer;
 }
 
-#ins-time
-{
+#ins-time {
     position: absolute;
     top: -29px;
     color: #fff;
@@ -109,11 +96,10 @@ body
     white-space: pre;
     padding: 5px 6px;
     border-radius: 4px;
-	display:none;
+    display: none;
 }
 
-#s-hover
-{
+#s-hover {
     position: absolute;
     top: 0;
     bottom: 0;
@@ -122,13 +108,11 @@ body
     z-index: 2;
 }
 
-#ins-time, #s-hover
-{
+#ins-time, #s-hover {
     background-color: #3b3d50;
 }
 
-#seek-bar
-{
+#seek-bar {
     content: '';
     position: absolute;
     top: 0;
@@ -140,8 +124,7 @@ body
     z-index: 1;
 }
 
-#player-content
-{
+#player-content {
     position: relative;
     height: 100%;
     background-color: #fff;
@@ -149,8 +132,7 @@ body
     z-index: 2;
 }
 
-#album-art
-{
+#album-art {
     position: absolute;
     width: 115px;
     height: 115px;
@@ -162,13 +144,11 @@ body
     overflow: hidden;
 }
 
-#album-art.active
-{
+#album-art.active {
     box-shadow: 0 0 0 4px #fff7f7, 0 30px 50px -15px #afb7c1;
 }
 
-#album-art:before
-{
+#album-art:before {
     content: '';
     position: absolute;
     top: 50%;
@@ -183,8 +163,7 @@ body
     z-index: 2;
 }
 
-#album-art img
-{
+#album-art img {
     display: block;
     position: absolute;
     top: 0;
@@ -194,26 +173,26 @@ body
     z-index: -1;
 }
 
-#album-art img.active
-{
+#album-art img.active {
     opacity: 1;
     z-index: 1;
 }
 
-#album-art.active img.active
-{
+#album-art.active img.active {
     z-index: 1;
     animation: rotateAlbumArt 3s linear 0s infinite forwards;
 }
 
-@keyframes rotateAlbumArt
-{
-    0%{ transform: rotateZ(0); }
-    100%{ transform: rotateZ(360deg); }
+@keyframes rotateAlbumArt {
+    0% {
+        transform: rotateZ(0);
+    }
+    100% {
+        transform: rotateZ(360deg);
+    }
 }
 
-#buffer-box
-{
+#buffer-box {
     position: absolute;
     top: 50%;
     right: 0;
@@ -232,30 +211,25 @@ body
     z-index: 2;
 }
 
-#album-art img, #buffer-box
-{
+#album-art img, #buffer-box {
     transition: 0.1s linear all;
 }
 
-#album-art.buffering img
-{
+#album-art.buffering img {
     opacity: 0.25;
 }
 
-#album-art.buffering img.active
-{
+#album-art.buffering img.active {
     opacity: 0.8;
     filter: blur(2px);
     -webkit-filter: blur(2px);
 }
 
-#album-art.buffering #buffer-box
-{
+#album-art.buffering #buffer-box {
     opacity: 1;
 }
 
-#player-controls
-{
+#player-controls {
     width: 250px;
     height: 100%;
     margin: 0 5px 0 141px;
@@ -264,15 +238,13 @@ body
     margin-top: 10px;
 }
 
-.control
-{
+.control {
     width: 33.333%;
     float: left;
     padding: 12px 0;
 }
 
-.button
-{
+.button {
     width: 26px;
     height: 26px;
     padding: 25px;
@@ -281,8 +253,7 @@ body
     cursor: pointer;
 }
 
-.button i
-{
+.button i {
     display: block;
     color: #d6dee7;
     font-size: 26px;
@@ -290,18 +261,15 @@ body
     line-height: 1;
 }
 
-.button, .button i
-{
+.button, .button i {
     transition: 0.2s ease all;
 }
 
-.button:hover
-{
+.button:hover {
     background-color: #d6d6de;
 }
 
-.button:hover i
-{
+.button:hover i {
     color: #fff;
 }
 
@@ -310,81 +278,6 @@ body
   position: fixed;
   right: 0;
   bottom: 0;
-  padding: 10px 14px;
-  margin: 20px;
-  color: #fff;
-  font-size: 14px;
-  text-decoration: none;
-  background-color: #ae5f87;
-  border-radius: 4px;
-  box-shadow: 0 10px 20px -5px rgba(174, 95, 135, 0.86);
-  z-index: 125;
+  padding: 10px
+
 }
-/* Tu código existente ... */
-
-*:focus {
-    outline: none;
-}
-
-body {
-    font-family: Helvetica, Arial;
-    margin: 0;
-}
-
-#app-cover {
-    position: relative;
-    width: 430px;
-    height: 100px;
-}
-
-#player {
-    position: relative;
-    height: 100%;
-    z-index: 3;
-}
-
-/* ... Resto de tu código existente */
-
-/* Modificaciones para hacerlo más adaptable */
-
-body {
-    font-size: 1.6rem; /* Utilizando rem para un tamaño relativo al tamaño base (16px) */
-    background-color: #eaeaea;
-}
-
-/* ... Resto de tu código existente ... */
-
-/* Ajustes para hacerlo más adaptable */
-
-#player-track {
-    padding: 13px 10% 10px 30%; /* Ajuste del padding para hacerlo más proporcionado */
-}
-
-#player-controls {
-    width: 60%; /* Ajuste del ancho */
-}
-
-.control {
-    width: 33.333%;
-}
-
-.button {
-    width: 26px;
-    height: 26px;
-    padding: 20%; /* Ajuste del padding */
-}
-
-.button i {
-    font-size: 1.3em; /* Tamaño de ícono relativo */
-}
-@media (max-width: 767px) {
-    /* Estilos para pantallas más pequeñas (celulares) */
-  }
-  
-  @media (min-width: 768px) and (max-width: 991px) {
-    /* Estilos para pantallas medianas (tablets) */
-  }
-  
-  @media (min-width: 992px) {
-    /* Estilos para pantallas grandes (ordenadores) */
-  }
