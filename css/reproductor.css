@@ -320,3 +320,60 @@ body
   box-shadow: 0 10px 20px -5px rgba(174, 95, 135, 0.86);
   z-index: 125;
 }
+/* Tu código existente ... */
+
+*:focus {
+    outline: none;
+}
+
+body {
+    font-family: Helvetica, Arial;
+    margin: 0;
+}
+
+#app-cover {
+    position: relative;
+    width: 430px;
+    height: 100px;
+}
+
+#player {
+    position: relative;
+    height: 100%;
+    z-index: 3;
+}
+
+/* ... Resto de tu código existente */
+
+/* Modificaciones para hacerlo más adaptable */
+
+body {
+    font-size: 1.6rem; /* Utilizando rem para un tamaño relativo al tamaño base (16px) */
+    background-color: #eaeaea;
+}
+
+/* ... Resto de tu código existente ... */
+
+/* Ajustes para hacerlo más adaptable */
+
+#player-track {
+    padding: 13px 10% 10px 30%; /* Ajuste del padding para hacerlo más proporcionado */
+}
+
+#player-controls {
+    width: 60%; /* Ajuste del ancho */
+}
+
+.control {
+    width: 33.333%;
+}
+
+.button {
+    width: 26px;
+    height: 26px;
+    padding: 20%; /* Ajuste del padding */
+}
+
+.button i {
+    font-size: 1.3em; /* Tamaño de ícono relativo */
+}
