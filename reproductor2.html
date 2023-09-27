@@ -1,15 +1,65 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reproductor de Música</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Reproductor</title>
+    <link rel="stylesheet" href="css/reproductor.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.3/css/bootstrap.min.css'/>
 </head>
 
-<body>
+<body class="container">
+    <div class="row">
+        <div class="col-md-5">
+            <div class="card mb-3" style="max-width: 540px;">
+                <div class="row no-gutters">
+                  <div class="col-md-4">
+                    <img src="ACA VA LA IMAGEN DEL DISCO / CANCION" class="card-img" alt="">
+                  </div>
+                  <div class="col-md-8">
+                    <div class="card-body">
+                      <h5 class="card-title">TITULO CANCION</h5>
+                      <p class="card-text">NOMBRE DE LA BANDA</p>
+                      <p class="card-text"><small class="text-muted">FECHA DE LANZAMIENTO</small></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+        </div>
+        <div class="col-md-7">
+            <div class="card text-white bg-dark mb-3">
+                <div class="card-header">NOMBRE DE LA BANDA</div>
+                <div class="card-body">
+                  <h5 class="card-title">Bio</h5>
+                  <p class="card-text">Biografía de la banda (NO)</p>
+                </div>
+              </div>
+              <nav>
+                <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                  <a class="nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">Discos</a>
+                  <a class="nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Profile</a>
+                  <a class="nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">Contact</a>
+                </div>
+              </nav>
+              <div class="tab-content" id="nav-tabContent">
+                <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+                    CONTENIDO 1 (NO)
+                </div>
+                <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+                    CONTENIDO 2 (NO)
+                </div>
+                <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
+                    CONTENIDO 3 (NO)
+                </div>
+              </div>
+        </div>
+    </div>
+
     <div id="app-cover">
+        <div id="bg-artwork"></div>
+        <div id="bg-layer"></div>
         <div id="player">
             <div id="player-track">
                 <div id="album-name"></div>
@@ -24,11 +74,11 @@
                     <div id="seek-bar"></div>
                 </div>
             </div>
-            <div id="album-art">
-                <img src="album-art.jpg" id="contenedorAlbumImagen" alt="Album Image">
-                <div id="buffer-box">Cargando...</div>
-            </div>
             <div id="player-content">
+                <div id="album-art">
+                    <img id="contenedorAlbumImagen" src="" />
+                    <div id="buffer-box">Buffering ...</div>
+                </div>
                 <div id="player-controls">
                     <div class="control">
                         <div class="button" id="play-previous">
@@ -49,7 +99,8 @@
             </div>
         </div>
     </div>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
+
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.3/js/bootstrap.min.js'></script>
     <script src="js/reproductor2.js"></script>
 </body>
