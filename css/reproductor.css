@@ -318,3 +318,42 @@ body {
         font-size: 1.6rem; /* Ajuste del tamaño de la fuente */
     }
 }
+/* Media queries para diferentes tamaños de pantalla */
+
+@media (max-width: 767px) {
+    /* Estilos para pantallas más pequeñas (celulares) */
+    #player-track {
+        padding: 10px; /* Ajuste de padding para hacerlo más compacto */
+    }
+
+    .control {
+        padding: 10px 0; /* Ajuste de padding para hacerlo más compacto */
+    }
+
+    .button {
+        padding: 20%; /* Ajuste de padding para hacerlo más proporcionado */
+    }
+
+    .button i {
+        font-size: 1.6em; /* Tamaño de ícono relativo */
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    /* Estilos para pantallas medianas (tablets) */
+    #player-track {
+        padding: 13px 15px; /* Ajuste de padding para hacerlo más proporcionado */
+    }
+
+    .control {
+        padding: 13px 0; /* Ajuste de padding para hacerlo más proporcionado */
+    }
+
+    .button {
+        padding: 23%; /* Ajuste de padding para hacerlo más proporcionado */
+    }
+
+    .button i {
+        font-size: 1.8em; /* Tamaño de ícono relativo */
+    }
+}
