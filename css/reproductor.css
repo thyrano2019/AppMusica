@@ -324,3 +324,6 @@ body {
         margin-bottom: 10px; /* Agrega un margen inferior para separarlo del botón de reproducción */
     }
 }
+#album-art.buffering img {
+    margin-bottom: 10px; /* Agrega un margen inferior para separarlo del botón de reproducción */
+}
