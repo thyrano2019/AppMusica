@@ -276,14 +276,12 @@ body {
 }
 
 /* Ajustes para hacerlo más adaptable */
-
 body {
     font-size: 1.6rem; /* Utilizando rem para un tamaño relativo al tamaño base (16px) */
     background-color: #eaeaea;
 }
 
 /* Media queries para diferentes tamaños de pantalla */
-
 @media (max-width: 767px) {
     /* Estilos para pantallas más pequeñas (celulares) */
     body {
@@ -303,77 +301,4 @@ body {
     body {
         font-size: 1.6rem; /* Ajuste del tamaño de la fuente */
     }
-}
-
-/* Media queries para diferentes tamaños de pantalla */
-
-@media (max-width: 767px) {
-    /* Estilos para pantallas más pequeñas (celulares) */
-    #player-track {
-        padding: 10px; /* Ajuste de padding para hacerlo más compacto */
-    }
-
-    .control {
-        padding: 10px 0; /* Ajuste de padding para hacerlo más compacto */
-    }
-
-    .button {
-        padding: 20%; /* Ajuste de padding para hacerlo más proporcionado */
-    }
-
-    .button i {
-        font-size: 1.6em; /* Tamaño de ícono relativo */
-    }
-}
-
-@media (min-width: 768px) and (max-width: 991px) {
-    /* Estilos para pantallas medianas (tablets) */
-    #player-track {
-        padding: 13px 15px; /* Ajuste de padding para hacerlo más proporcionado */
-    }
-
-    .control {
-        padding: 13px 0; /* Ajuste de padding para hacerlo más proporcionado */
-    }
-
-    .button {
-        padding: 23%; /* Ajuste de padding para hacerlo más proporcionado */
-    }
-
-    .button i {
-        font-size: 1.8em; /* Tamaño de ícono relativo */
-    }
-}
-@media (max-width: 767px) {
-    #album-art {
-        margin-bottom: 10px; /* Agrega un margen inferior para separarlo del botón de reproducción */
-    }
-}
-#album-art {
-    position: relative; /* Cambiado a relativo para que la imagen se posicione correctamente */
-    width: 100%;
-    padding-bottom: 100%; /* Mantenemos un aspecto cuadrado para el contenedor del álbum */
-    overflow: hidden;
-    box-shadow: 0 0 0 10px #fff;
-    border-radius: 15px;
-}
-
-#buffer-box {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: #1f1f1f;
-    font-size: 13px;
-    font-family: Helvetica;
-    font-weight: bold;
-}
-
-#contenedorAlbumImagen {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Ajustamos la forma en que la imagen se ajusta en el contenedor */
 }

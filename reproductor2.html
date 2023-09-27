@@ -1,51 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reproductor</title>
-    <link rel="stylesheet" href="css/reproductor.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
-    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.3/css/bootstrap.min.css'/>
+    <title>Reproductor de Música</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 
-<body class="container">
-    <div class="row">
-        <div class="col-md-5">
-            <div class="card mb-3" style="max-width: 540px;">
-                <div class="row no-gutters">
-                  <div class="col-md-4">
-                    <img src="ACA VA LA IMAGEN DEL DISCO / CANCION" class="card-img" alt="">
-                  </div>
-                  <div class="col-md-8">
-                    <div class="card-body">
-                        <div> Nombre de la Cancion</div>
-                      <h5 class="card-title">Nombre de la Cancion</h5>
-                      <div> nombre del Artista</div>
-                      <p class="card-text">Nombre del Artista</p>
-                      
-                    </div>
-                  </div>
-                </div>
-              </div>
-        </div>
-        <div class="col-md-7">
-            <div class="card text-white bg-dark mb-3">
-               
-                <div class="card-header">NOMBRE DE LA BANDA</div>
-                <div class="card-body">
-                    <p class="card-text"></p>
-                    <div> Nombre de la cancion</div>
-                  <h5 class="card-title">Bio</h5>
-                  
-                </div>
-              </div>
-              
-
+<body>
     <div id="app-cover">
-        <div id="bg-artwork"></div> 
-        <div id="bg-layer"></div>
         <div id="player">
             <div id="player-track">
                 <div id="album-name"></div>
@@ -60,11 +24,11 @@
                     <div id="seek-bar"></div>
                 </div>
             </div>
+            <div id="album-art">
+                <img src="album-art.jpg" id="contenedorAlbumImagen" alt="Album Image">
+                <div id="buffer-box">Cargando...</div>
+            </div>
             <div id="player-content">
-                <div id="album-art">
-                    <div id="buffer-box">Buffering ...</div>
-                    <img id="contenedorAlbumImagen" src="" />
-                </div>
                 <div id="player-controls">
                     <div class="control">
                         <div class="button" id="play-previous">
@@ -83,14 +47,10 @@
                     </div>
                 </div>
             </div>
-                </div>
-            </div>
         </div>
     </div>
-
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.3/js/bootstrap.min.js'></script>
-    <script src="js/reproductor2.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="script.js"></script>
 </body>
 
 </html>
