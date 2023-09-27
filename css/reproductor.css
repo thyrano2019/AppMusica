@@ -289,8 +289,40 @@ body {
   z-index: 125;
 }
 
-media (max-width: 767px) {
+/* Estilos generales */
+*:focus {
+    outline: none;
+}
+
+body {
+    font-family: Helvetica, Arial;
+    margin: 0;
+}
+
+#app-cover {
+    position: relative;
+    width: 100%; /* Cambiado a porcentaje para hacerlo adaptable */
+    max-width: 430px; /* Ancho máximo para evitar que se vea muy grande en pantallas grandes */
+    height: 100px;
+    margin: 0 auto; /* Centrado en la página */
+}
+
+#player {
+    position: relative;
+    height: 100%;
+    z-index: 3;
+}
+
+/* Resto de tu código existente */
+
+/* Media queries para diferentes tamaños de pantalla */
+
+@media (max-width: 767px) {
     /* Estilos para pantallas más pequeñas (celulares) */
+    body {
+        font-size: 1.2rem; /* Ajuste del tamaño de la fuente */
+    }
+
     #player-track {
         padding: 10px; /* Ajuste de padding para hacerlo más compacto */
     }
@@ -310,6 +342,10 @@ media (max-width: 767px) {
 
 @media (min-width: 768px) and (max-width: 991px) {
     /* Estilos para pantallas medianas (tablets) */
+    body {
+        font-size: 1.4rem; /* Ajuste del tamaño de la fuente */
+    }
+
     #player-track {
         padding: 13px 15px; /* Ajuste de padding para hacerlo más proporcionado */
     }
@@ -326,3 +362,4 @@ media (max-width: 767px) {
         font-size: 1.8em; /* Tamaño de ícono relativo */
     }
 }
+
