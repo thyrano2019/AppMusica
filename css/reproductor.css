@@ -10,10 +10,10 @@ body {
 
 #app-cover {
     position: relative;
-    width: 100%;
-    max-width: 430px;
+    width: 100%; /* Cambiado a porcentaje para hacerlo adaptable */
+    max-width: 430px; /* Ancho máximo para evitar que se vea muy grande en pantallas grandes */
     height: 100px;
-    margin: 0 auto;
+    margin: 0 auto; /* Centrado en la página */
 }
 
 #player {
@@ -195,8 +195,8 @@ body {
 #buffer-box {
     position: absolute;
     top: 50%;
-    right: 0;
-    left: 0;
+    left: 50%; /* Centrar horizontalmente */
+    transform: translate(-50%, -50%); /* Centrar horizontal y verticalmente */
     height: 13px;
     color: #1f1f1f;
     font-size: 13px;
@@ -205,24 +205,10 @@ body {
     font-weight: bold;
     line-height: 1;
     padding: 6px;
-    margin: -12px auto 0 auto;
+    margin-top: 10px; /* Margen superior para separarse del botón */
     background-color: rgba(255, 255, 255, 0.19);
     opacity: 0;
     z-index: 2;
-}
-
-#album-art img, #buffer-box {
-    transition: 0.1s linear all;
-}
-
-#album-art.buffering img {
-    opacity: 0.25;
-}
-
-#album-art.buffering img.active {
-    opacity: 0.8;
-    filter: blur(2px);
-    -webkit-filter: blur(2px);
 }
 
 #album-art.buffering #buffer-box {
@@ -230,8 +216,10 @@ body {
 }
 
 #player-controls {
-    width: 100%; /* Cambiado para ocupar todo el ancho en móviles */
-    height: auto; /* Ajuste de altura automática en móviles */
+    width: 250px;
+    height: 100%;
+    margin: 0 5px 0 141px;
+    float: right;
     overflow: hidden;
     margin-top: 10px;
 }
@@ -240,7 +228,6 @@ body {
     width: 33.333%;
     float: left;
     padding: 12px 0;
-    text-align: center; /* Centrar el contenido de cada control */
 }
 
 .button {
@@ -273,25 +260,25 @@ body {
 }
 
 #ytd-url {
-    display: block;
-    position: fixed;
-    right: 0;
-    bottom: 0;
-    padding: 10px 14px;
-    margin: 20px;
-    color: #fff;
-    font-size: 14px;
-    text-decoration: none;
-    background-color: #ae5f87;
-    border-radius: 4px;
-    box-shadow: 0 10px 20px -5px rgba(174, 95, 135, 0.86);
-    z-index: 125;
+  display: block;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  padding: 10px 14px;
+  margin: 20px;
+  color: #fff;
+  font-size: 14px;
+  text-decoration: none;
+  background-color: #ae5f87;
+  border-radius: 4px;
+  box-shadow: 0 10px 20px -5px rgba(174, 95, 135, 0.86);
+  z-index: 125;
 }
 
 /* Ajustes para hacerlo más adaptable */
 
 body {
-    font-size: 1.6rem;
+    font-size: 1.6rem; /* Utilizando rem para un tamaño relativo al tamaño base (16px) */
     background-color: #eaeaea;
 }
 
@@ -300,30 +287,65 @@ body {
 @media (max-width: 767px) {
     /* Estilos para pantallas más pequeñas (celulares) */
     body {
-        font-size: 1.2rem;
+        font-size: 1.2rem; /* Ajuste del tamaño de la fuente */
     }
+}
 
+@media (min-width: 768px) and (max-width: 991px) {
+    /* Estilos para pantallas medianas (tablets) */
+    body {
+        font-size: 1.4rem; /* Ajuste del tamaño de la fuente */
+    }
+}
+
+@media (min-width: 992px) {
+    /* Estilos para pantallas grandes (ordenadores) */
+    body {
+        font-size: 1.6rem; /* Ajuste del tamaño de la fuente */
+    }
+}
+
+/* Media queries para diferentes tamaños de pantalla */
+
+@media (max-width: 767px) {
+    /* Estilos para pantallas más pequeñas (celulares) */
     #player-track {
-        padding: 10px;
+        padding: 10px; /* Ajuste de padding para hacerlo más compacto */
     }
 
     .control {
-        padding: 10px 0;
+        padding: 10px 0; /* Ajuste de padding para hacerlo más compacto */
     }
 
     .button {
-        padding: 20%;
+        padding: 20%; /* Ajuste de padding para hacerlo más proporcionado */
     }
 
     .button i {
-        font-size: 1.6em;
+        font-size: 1.6em; /* Tamaño de ícono relativo */
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    /* Estilos para pantallas medianas (tablets) */
+    #player-track {
+        padding: 13px 15px; /* Ajuste de padding para hacerlo más proporcionado */
+    }
+
+    .control {
+        padding: 13px 0; /* Ajuste de padding para hacerlo más proporcionado */
+    }
+
+    .button {
+        padding: 23%; /* Ajuste de padding para hacerlo más proporcionado */
+    }
+
+    .button i {
+        font-size: 1.8em; /* Tamaño de ícono relativo */
     }
 }
 @media (max-width: 767px) {
     #album-art {
         margin-bottom: 10px; /* Agrega un margen inferior para separarlo del botón de reproducción */
     }
-}
-#album-art.buffering img {
-    margin-bottom: 10px; /* Agrega un margen inferior para separarlo del botón de reproducción */
 }
