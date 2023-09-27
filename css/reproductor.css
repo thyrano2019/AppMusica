@@ -10,10 +10,10 @@ body {
 
 #app-cover {
     position: relative;
-    width: 100%; /* Cambiado a porcentaje para hacerlo adaptable */
-    max-width: 430px; /* Ancho máximo para evitar que se vea muy grande en pantallas grandes */
+    width: 100%;
+    max-width: 430px;
     height: 100px;
-    margin: 0 auto; /* Centrado en la página */
+    margin: 0 auto;
 }
 
 #player {
@@ -230,10 +230,8 @@ body {
 }
 
 #player-controls {
-    width: 250px;
-    height: 100%;
-    margin: 0 5px 0 141px;
-    float: right;
+    width: 100%; /* Cambiado para ocupar todo el ancho en móviles */
+    height: auto; /* Ajuste de altura automática en móviles */
     overflow: hidden;
     margin-top: 10px;
 }
@@ -242,6 +240,7 @@ body {
     width: 33.333%;
     float: left;
     padding: 12px 0;
+    text-align: center; /* Centrar el contenido de cada control */
 }
 
 .button {
@@ -274,92 +273,54 @@ body {
 }
 
 #ytd-url {
-  display: block;
-  position: fixed;
-  right: 0;
-  bottom: 0;
-  padding: 10px 14px;
-  margin: 20px;
-  color: #fff;
-  font-size: 14px;
-  text-decoration: none;
-  background-color: #ae5f87;
-  border-radius: 4px;
-  box-shadow: 0 10px 20px -5px rgba(174, 95, 135, 0.86);
-  z-index: 125;
+    display: block;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    padding: 10px 14px;
+    margin: 20px;
+    color: #fff;
+    font-size: 14px;
+    text-decoration: none;
+    background-color: #ae5f87;
+    border-radius: 4px;
+    box-shadow: 0 10px 20px -5px rgba(174, 95, 135, 0.86);
+    z-index: 125;
 }
 
-/* Estilos generales */
-*:focus {
-    outline: none;
-}
+/* Ajustes para hacerlo más adaptable */
 
 body {
-    font-family: Helvetica, Arial;
-    margin: 0;
+    font-size: 1.6rem;
+    background-color: #eaeaea;
 }
-
-#app-cover {
-    position: relative;
-    width: 100%; /* Cambiado a porcentaje para hacerlo adaptable */
-    max-width: 430px; /* Ancho máximo para evitar que se vea muy grande en pantallas grandes */
-    height: 100px;
-    margin: 0 auto; /* Centrado en la página */
-}
-
-#player {
-    position: relative;
-    height: 100%;
-    z-index: 3;
-}
-
-/* Resto de tu código existente */
 
 /* Media queries para diferentes tamaños de pantalla */
 
 @media (max-width: 767px) {
     /* Estilos para pantallas más pequeñas (celulares) */
     body {
-        font-size: 1.2rem; /* Ajuste del tamaño de la fuente */
+        font-size: 1.2rem;
     }
 
     #player-track {
-        padding: 10px; /* Ajuste de padding para hacerlo más compacto */
+        padding: 10px;
     }
 
     .control {
-        padding: 10px 0; /* Ajuste de padding para hacerlo más compacto */
+        padding: 10px 0;
     }
 
     .button {
-        padding: 20%; /* Ajuste de padding para hacerlo más proporcionado */
+        padding: 20%;
     }
 
     .button i {
-        font-size: 1.6em; /* Tamaño de ícono relativo */
+        font-size: 1.6em;
     }
 }
-
-@media (min-width: 768px) and (max-width: 991px) {
-    /* Estilos para pantallas medianas (tablets) */
-    body {
-        font-size: 1.4rem; /* Ajuste del tamaño de la fuente */
-    }
-
-    #player-track {
-        padding: 13px 15px; /* Ajuste de padding para hacerlo más proporcionado */
-    }
-
-    .control {
-        padding: 13px 0; /* Ajuste de padding para hacerlo más proporcionado */
-    }
-
-    .button {
-        padding: 23%; /* Ajuste de padding para hacerlo más proporcionado */
-    }
-
-    .button i {
-        font-size: 1.8em; /* Tamaño de ícono relativo */
+@media (max-width: 767px) {
+    #album-art {
+        margin-bottom: 10px; /* Agrega un margen inferior para separarlo del botón de reproducción */
     }
 }
-
