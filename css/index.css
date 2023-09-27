@@ -71,10 +71,9 @@ body {
     color: var(--color-white);
 }
 
-/* Estilos para las columnas */
 #rp-q {
     display: flex;
-    flex-flow: row;
+    flex-flow: row wrap; /* Cambiado para que las columnas se envuelvan en filas en pantallas pequeñas */
     justify-content: space-around;
     align-items: flex-start;
     padding: 20px 10px;
@@ -84,8 +83,16 @@ body {
     background: var(--color-black);
     padding: 10px;
     border-radius: 5px;
-    width: calc(33% - 20px);
-    margin: 0 10px;
+    width: 100%; /* Cambiado para que cada columna ocupe el 100% del ancho en pantallas pequeñas */
+    margin: 0 0 10px 0; /* Añadido margen inferior para separar las columnas en pantallas pequeñas */
+    box-sizing: border-box; /* Añadido para que el padding y el borde no afecten el ancho total */
+}
+
+/* Media query para pantallas pequeñas (celulares) */
+@media (max-width: 767px) {
+    #rp-q > div {
+        width: 100%; /* En pantallas pequeñas, cada columna ocupa el 100% del ancho */
+    }
 }
 
 #rp-q .sin-datos {

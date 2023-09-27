@@ -278,6 +278,43 @@ body {
   position: fixed;
   right: 0;
   bottom: 0;
-  padding: 10px
+  padding: 10px 14px;
+  margin: 20px;
+  color: #fff;
+  font-size: 14px;
+  text-decoration: none;
+  background-color: #ae5f87;
+  border-radius: 4px;
+  box-shadow: 0 10px 20px -5px rgba(174, 95, 135, 0.86);
+  z-index: 125;
+}
 
+/* Ajustes para hacerlo más adaptable */
+
+body {
+    font-size: 1.6rem; /* Utilizando rem para un tamaño relativo al tamaño base (16px) */
+    background-color: #eaeaea;
+}
+
+/* Media queries para diferentes tamaños de pantalla */
+
+@media (max-width: 767px) {
+    /* Estilos para pantallas más pequeñas (celulares) */
+    body {
+        font-size: 1.2rem; /* Ajuste del tamaño de la fuente */
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    /* Estilos para pantallas medianas (tablets) */
+    body {
+        font-size: 1.4rem; /* Ajuste del tamaño de la fuente */
+    }
+}
+
+@media (min-width: 992px) {
+    /* Estilos para pantallas grandes (ordenadores) */
+    body {
+        font-size: 1.6rem; /* Ajuste del tamaño de la fuente */
+    }
 }
