@@ -349,3 +349,42 @@ body {
         margin-bottom: 10px; /* Agrega un margen inferior para separarlo del botón de reproducción */
     }
 }
+#buffer-box {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(0, -50%);
+    height: 13px;
+    color: #1f1f1f;
+    font-size: 13px;
+    font-family: Helvetica;
+    text-align: center;
+    font-weight: bold;
+    line-height: 1;
+    padding: 6px;
+    margin-top: 0; /* Elimina el margen superior para evitar superposiciones */
+    background-color: rgba(255, 255, 255, 0.19);
+    opacity: 0;
+    z-index: 2;
+}
+
+#album-art.buffering #buffer-box {
+    opacity: 1;
+}
+
+/* Media queries para diferentes tamaños de pantalla */
+
+@media (max-width: 767px) {
+    /* Estilos para pantallas más pequeñas (celulares) */
+    #buffer-box {
+        position: relative; /* Cambiado a relativo para que se muestre al lado del reproductor */
+        top: auto;
+        left: auto;
+        transform: none;
+        margin-top: 10px; /* Agregado margen superior */
+    }
+
+    #player-content {
+        padding-right: 50px; /* Ajuste de padding para evitar superposiciones */
+    }
+}
