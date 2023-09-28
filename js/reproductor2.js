@@ -62,23 +62,20 @@ $.ajax({
 });    
 
 function playPause() {
-    setTimeout(function () {
-        if (audio.paused) {
-            playerTrack.addClass('active');
-            albumArt.addClass('active');
-            checkBuffering();
-            i.attr('class', 'fas fa-pause');
-            audio.play();
-        }
-        else {
-            playerTrack.removeClass('active');
-            albumArt.removeClass('active');
-            clearInterval(buffInterval);
-            albumArt.removeClass('buffering');
-            i.attr('class', 'fas fa-play');
-            audio.pause();
-        }
-    }, 300);
+    if (audio.paused) {
+        playerTrack.addClass('active');
+        albumArt.addClass('active');
+        checkBuffering();
+        i.attr('class', 'fas fa-pause');
+        audio.play();
+    } else {
+        playerTrack.removeClass('active');
+        albumArt.removeClass('active');
+        clearInterval(buffInterval);
+        albumArt.removeClass('buffering');
+        i.attr('class', 'fas fa-play');
+        audio.pause();
+    }
 }
 
 
